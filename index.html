@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kolme Haastetta</title>
+    <style>
+      body {
+        background-color: #19443c;
+      }
 
+      #container {
+        background-color: #e25444;
+        margin: auto;
+        max-width: 1000px;
+      }
+
+      h1,
+      h2 {
+        display: block;
+        margin: auto;
+      }
+
+      h1 {
+        color: #ffe2a1;
+      }
+
+      h2 {
+        background-color: #ffe2a1;
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>KOLME HAASTETTA</h1>
+      <h2 onclick="gameStart()">ALOITA</h2>
+    </div>
+
+    <script>
+      function gameStart() {
+        window.location.href = "tietovisa.html";
+      }
+    </script>
+  </body>
+</html>
