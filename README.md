@@ -1,1 +1,2 @@
-# KolmeHaastetta
+Kolme Haastetta on nettisivupeli RPKK:n Avoimien Ovien -tapahtumaan. 
+Pelin idea: pelaajan pitää suorittaa kolme erilaista haastetta (tietovisa, hirsipuu ja palapeli).Haasteiden teemana on RPKK ja koodaus. Ensimmäiseen haasteeseen kuulu muutama kysymyksiä, toisille haasteille valitaan satunnaisesti sana tai kuva (riippuu haasteesta) listasta. Lopputulos lasketaan oikeista vastauksista ja vastauden nopeusta. Pelin lopussa muodostaan Top-10 -tulostaulukko.
