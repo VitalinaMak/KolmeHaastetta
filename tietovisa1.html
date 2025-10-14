@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tietovisa1</title>
     <link rel="stylesheet" href="Styles.css" />
     <style></style>
   </head>
@@ -17,25 +17,34 @@
         <h2 class="kysymyksenNumero">Kysymys 1:</h2>
 
         <form id="lomake">
-          <fieldset>
-            <legend>Millä kommennolla voi tulosta teksi konsoliin Pythonilla?</legend>
+          <label class="tietovisaKysymys">Millä kommennolla voi tulosta teksi konsoliin Pythonilla?</label>
+
+          <label class="tietovisanVastaus">
             <input type="radio" id="vaihtoehto1" name="unit" value="false" required />
-            <label for="vaihtoehto1">console.log()</label>
+            console.log()
+          </label>
 
+          <label class="tietovisanVastaus">
             <input type="radio" id="vaihtoehto2" name="unit" value="false" />
-            <label for="vaihtoehto2">Console.WriteLine()</label>
+            Console.WriteLine()
+          </label>
 
+          <label class="tietovisanVastaus">
             <input type="radio" id="vaihtoehto3" name="unit" value="true" />
-            <label for="vaihtoehto3">print()</label>
+            print()
+          </label>
 
+          <label class="tietovisanVastaus">
             <input type="radio" id="vaihtoehto4" name="unit" value="false" />
-            <label for="vaihtoehto4">Tulosta()</label>
+            Tulosta()
+          </label>
 
-            <input type="radio" class="vaihtoehto5" name="unit" value="false" />
-            <label for="vaihtoehto5">printf()</label>
-          </fieldset>
+          <label class="tietovisanVastaus">
+            <input type="radio" id="vaihtoehto5" name="unit" value="false" />
+            printf()
+          </label>
 
-          <button type="submit">Vastaa</button>
+          <button class="lahetaVastaus" type="submit">Vastaa</button>
         </form>
       </div>
 
