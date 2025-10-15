@@ -1,6 +1,6 @@
 "use strict";
 
-let kokonaisPisteet = 0;
+let pisteet = 0;
 
 const lomake = document.getElementById("lomake");
 
@@ -16,9 +16,13 @@ lomake.addEventListener("submit", function (event) {
         vastaukenTeksti.className = "rightAnswer";
     }
 
-    kokonaisPisteet += parseInt(vastaus);
-    console.log(kokonaisPisteet);
+    pisteet += parseInt(vastaus);
+    console.log(pisteet);
+
+    localStorage.setItem("kokonaisPisteet", pisteet);
 
 
-    /* window.location.href = "tietovisa1.html"; */
+    /* setTimeout(() => {
+        window.location.href = 'tietovisa2.html';
+      }, 400) */
 })
