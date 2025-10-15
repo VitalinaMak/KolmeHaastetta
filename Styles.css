@@ -104,3 +104,17 @@ input[type="radio"] {
 .lahetaVastaus:hover {
   background-color: #3cabd3;
 }
+
+#testi {
+  display: none;
+}
+
+.rightAnswer {
+  background-color: green;
+  color: white;
+}
+
+.wrongAnswer {
+  background-color: red;
+  color: white;
+}
