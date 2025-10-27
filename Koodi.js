@@ -1,24 +1,80 @@
 "use strict";
 
-let kokonaisPisteet = 0;
+let pisteet = 0;
+localStorage.setItem("kokonaisPisteet", 1);
 
-const lomake = document.getElementById("lomake");
+const lomake1 = document.getElementById("lomake1");
+const lomake2 = document.getElementById("lomake2");
 
-lomake.addEventListener("submit", function (event) {
+lomake1.addEventListener("submit", function (event) {
     event.preventDefault();
     let vastaus = document.querySelector('input[name="unit"]:checked').value;  //haetaan vastaus lomakeesta
     console.log(vastaus);
 
-    let vastaukenTeksti = document.querySelector('input[name="unit"]:checked').nextSibling;
+    let changedColor = "";
     if (vastaus=="0") {
-        vastaukenTeksti.className+="wrongAnswer";
+        changedColor = "red";
     } else {
-        vastaukenTeksti.className = "rightAnswer";
+        changedColor = "green";
     }
 
-    kokonaisPisteet += parseInt(vastaus);
-    console.log(kokonaisPisteet);
+    display1(changedColor);
+
+    pisteet += parseInt(vastaus);
+    console.log(pisteet);
+
+    localStorage.setItem("kokonaisPisteet", pisteet);
 
 
-    /* window.location.href = "tietovisa1.html"; */
+    setTimeout(() => {
+        let elemsToHide = document.getElementsByClassName("kysymys1");
+        for (let i=0;i<elemsToHide.length;i+=1){
+        elemsToHide[i].style.display = 'none';
+        }
+        let elemsToReveal = document.getElementsByClassName("kysymys2");
+        for (let i=0;i<elemsToReveal.length;i+=1){
+        elemsToReveal[i].style.display = 'block';
+        }
+      }, 400)
 })
+
+lomake2.addEventListener("submit", function (event) {
+    event.preventDefault();
+    let vastaus = document.querySelector('input[name="unit"]:checked').value;  //haetaan vastaus lomakeesta
+    console.log(vastaus);
+
+    let vastauksenTeksti = document.querySelector('input[name="unit"]:checked').parentNode;
+    if (vastaus=="0") {
+        vastauksenTeksti.style.backgroundColor="red";
+    } else {
+        vastauksenTeksti.className += "rightAnswer";
+    }
+
+    pisteet += parseInt(vastaus);
+    console.log(pisteet);
+
+    localStorage.setItem("kokonaisPisteet", pisteet);
+
+
+    /* setTimeout(() => {
+        window.location.href = 'tietovisa2.html';
+      }, 400) */
+})
+
+function display1(changedColor){
+    if(document.getElementById('vaihtoehto1-1').checked) {
+      document.getElementById('vaihtoehto1-1').style.backgroundColor=changedColor
+    } 
+    else if(document.getElementById('vaihtoehto1-2').checked) {
+      document.getElementById('vaihtoehto1-2').style.backgroundColor=changedColor
+    }
+    else if(document.getElementById('vaihtoehto1-3').checked) {
+      document.getElementById('vaihtoehto1-3').style.backgroundColor=changedColor
+    }
+    else if(document.getElementById('vaihtoehto1-4').checked) {
+      document.getElementById('vaihtoehto1-4').style.backgroundColor=changedColor
+    }
+    else{
+      document.getElementById('vaihtoehto1-5').style.backgroundColor=changedColor
+    }  
+  }

@@ -45,6 +45,7 @@ h1 {
 }
 
 .kysymyksenNumero {
+  display: block;
   padding-left: 15px;
   padding-top: 0px;
   color: #294d62;
@@ -60,6 +61,7 @@ form {
 }
 
 .tietovisaKysymys {
+  display: block;
   font-family: Verdana, Arial;
   font-size: 18px;
   font-weight: bolder;
@@ -68,12 +70,16 @@ form {
 }
 
 .tietovisanVastaus {
-  display: inline-block;
+  display: block;
   text-align: left;
   font-family: Arial, Verdana;
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 7px;
+}
+
+.viimeinenRivi {
+  margin-bottom: 0px;
 }
 
 input[type="radio"] {
@@ -98,14 +104,14 @@ input[type="radio"] {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 12px;
-  margin-top: 7px;
+  margin-top: 14px;
 }
 
 .lahetaVastaus:hover {
   background-color: #3cabd3;
 }
 
-#testi {
+.kysymys2 {
   display: none;
 }
 
