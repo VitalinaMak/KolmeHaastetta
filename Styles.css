@@ -52,6 +52,23 @@ h1 {
   font-weight: bolder;
 }
 
+.mainfield {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 15px;
+  padding: 10px;
+  max-height: 335px;
+  max-width: 950px;
+}
+
+.tietovisanKuva {
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  background-color: #ffe6bfa2;
+  border: #9e8c77 solid 3px;
+}
+
 form {
   display: flex;
   flex-direction: column;

@@ -14,73 +14,80 @@
       <div class="main">
         <h1 class="haasteenNumero">HAASTE 1.</h1>
 
-        <h2 class="kysymyksenNumero kysymys1">Kysymys 1:</h2>
+        
+        <div class="mainfield">
+          <div id="formContainer">
+            <h2 class="kysymyksenNumero kysymys1">Kysymys 1:</h2>
 
-        <form id="lomake1" class="kysymys1">
-          <label class="tietovisaKysymys">Millä kommennolla voi tulosta teksi konsoliin Pythonilla?</label>
+            <form id="lomake1" class="kysymys1">
+              <label class="tietovisaKysymys">Millä kommennolla voi tulosta teksi konsoliin Pythonilla?</label>
+              
+              <label class="tietovisanVastaus">
+                <input type="radio" id="vaihtoehto1-1" name="unit" value="0" required />
+                console.log()
+              </label>
+              
+              <label class="tietovisanVastaus">
+                <input type="radio" id="vaihtoehto1-2" name="unit" value="0" />
+                Console.WriteLine()
+              </label>
+              
+              <label class="tietovisanVastaus">
+                <input type="radio" id="vaihtoehto1-3" name="unit" value="1" />
+                print()
+              </label>
+              
+              <label class="tietovisanVastaus">
+                <input type="radio" id="vaihtoehto1-4" name="unit" value="0" />
+                Tulosta()
+              </label>
+              
+              <label class="tietovisanVastaus viimeinenRivi">
+                <input type="radio" id="vaihtoehto1-5" name="unit" value="0" />
+              printf()
+            </label>
 
-          <label class="tietovisanVastaus">
-            <input type="radio" id="vaihtoehto1-1" name="unit" value="0" required />
-            console.log()
-          </label>
+            <button class="lahetaVastaus" type="submit">Vastaa</button>
+          </form>
 
-          <label class="tietovisanVastaus">
-            <input type="radio" id="vaihtoehto1-2" name="unit" value="0" />
-            Console.WriteLine()
-          </label>
+          <h2 class="kysymyksenNumero kysymys2">Kysymys 2:</h2>
 
-          <label class="tietovisanVastaus">
-            <input type="radio" id="vaihtoehto1-3" name="unit" value="1" />
-            print()
-          </label>
+          <form id="lomake2" class="kysymys2">
+            <label class="tietovisaKysymys">Millä kommennolla voi tulosta teksi konsoliin Pythonilla?</label>
+            
+            <label class="tietovisanVastaus">
+              <input type="radio" id="vaihtoehto2-1" name="unit" value="0" required />
+              console.log()
+            </label>
+            
+            <label class="tietovisanVastaus">
+              <input type="radio" id="vaihtoehto2-2" name="unit" value="0" />
+              Console.WriteLine()
+            </label>
+            
+            <label class="tietovisanVastaus">
+              <input type="radio" id="vaihtoehto2-3" name="unit" value="1" />
+              print()
+            </label>
+            
+            <label class="tietovisanVastaus">
+              <input type="radio" id="vaihtoehto2-4" name="unit" value="0" />
+              Tulosta()
+            </label>
+            
+            <label class="tietovisanVastaus viimeinenRivi">
+              <input type="radio" id="vaihtoehto2-5" name="unit" value="0" />
+              printf()
+            </label>
+            
+            <button class="lahetaVastaus" type="submit">Vastaa</button>
+          </div>
+          </form>
 
-          <label class="tietovisanVastaus">
-            <input type="radio" id="vaihtoehto1-4" name="unit" value="0" />
-            Tulosta()
-          </label>
-
-          <label class="tietovisanVastaus viimeinenRivi">
-            <input type="radio" id="vaihtoehto1-5" name="unit" value="0" />
-            printf()
-          </label>
-
-          <button class="lahetaVastaus" type="submit">Vastaa</button>
-        </form>
-
-        <img src="Snake1.png" style="width: 30%; display: inline" />
-
-        <h2 class="kysymyksenNumero kysymys2">Kysymys 2:</h2>
-
-        <form id="lomake2" class="kysymys2">
-          <label class="tietovisaKysymys">Millä kommennolla voi tulosta teksi konsoliin Pythonilla?</label>
-
-          <label class="tietovisanVastaus">
-            <input type="radio" id="vaihtoehto2-1" name="unit" value="0" required />
-            console.log()
-          </label>
-
-          <label class="tietovisanVastaus">
-            <input type="radio" id="vaihtoehto2-2" name="unit" value="0" />
-            Console.WriteLine()
-          </label>
-
-          <label class="tietovisanVastaus">
-            <input type="radio" id="vaihtoehto2-3" name="unit" value="1" />
-            print()
-          </label>
-
-          <label class="tietovisanVastaus">
-            <input type="radio" id="vaihtoehto2-4" name="unit" value="0" />
-            Tulosta()
-          </label>
-
-          <label class="tietovisanVastaus viimeinenRivi">
-            <input type="radio" id="vaihtoehto2-5" name="unit" value="0" />
-            printf()
-          </label>
-
-          <button class="lahetaVastaus" type="submit">Vastaa</button>
-        </form>
+          <div class="tietovisanKuva">
+            <img id="ensKysymyksenKuva" src="Snake1.png" alt="snake" style="max-width: 320px; display: block; margin:auto" />
+          </div>
+        </div>
       </div>
 
       <div class="side"></div>
