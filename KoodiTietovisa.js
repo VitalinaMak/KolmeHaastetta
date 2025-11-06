@@ -8,10 +8,9 @@ const lomake2 = document.getElementById("lomake2");
 const lomake3 = document.getElementById("lomake3");
 
 //lomake1
-
 lomake1.addEventListener("submit", function (event) {
     event.preventDefault();
-    const vastaus1 = document.querySelector('input[name="unit"]:checked').value;  //haetaan vastaus lomakeesta
+    const vastaus1 = lomake1.querySelector('input[name="unit"]:checked').value;  //haetaan vastaus lomakeesta
     console.log(vastaus1);
 
     let tulosKuvassa = document.getElementById("ensKysymyksenKuva");
@@ -42,10 +41,10 @@ lomake1.addEventListener("submit", function (event) {
         tulosKuvassa.style.marginRight="15px";
       }, 400)
 }) 
-
+//lomake2
 lomake2.addEventListener("submit", function (event) {
     event.preventDefault();
-    let vastaus2 = document.querySelector('input[name="unit"]:checked').value;  //haetaan vastaus lomakeesta
+    let vastaus2 = lomake2.querySelector('input[name="unit"]:checked').value;  //haetaan vastaus lomakeesta
     console.log(vastaus2);
 
     let vastauksenTeksti = document.querySelector('input[name="unit"]:checked').parentNode;
@@ -62,6 +61,7 @@ lomake2.addEventListener("submit", function (event) {
     localStorage.setItem("kokonaisPisteet", pisteet);
 
 
+
     setTimeout(() => {
         let elemsToHide = document.getElementsByClassName("kysymys2");
         for (let i=0;i<elemsToHide.length;i+=1){
@@ -74,10 +74,10 @@ lomake2.addEventListener("submit", function (event) {
         }
       }, 400)
 })
-
+//lomake3
 lomake3.addEventListener("submit", function (event) {
     event.preventDefault();
-    let vastaus3 = document.querySelector('input[name="unit"]:checked').value;  //haetaan vastaus lomakeesta
+    let vastaus3 = lomake3.querySelector('input[name="unit"]:checked').value;  //haetaan vastaus lomakeesta
     console.log(vastaus3);
 
     let vastauksenTeksti = document.querySelector('input[name="unit"]:checked').parentNode;
@@ -94,24 +94,7 @@ lomake3.addEventListener("submit", function (event) {
     localStorage.setItem("kokonaisPisteet", pisteet);
 
 
-    /* setTimeout(() => {
-        window.location.href = "tietovisa.html";
-      }, 400) */
+    setTimeout(() => {
+        window.location.href = "hirsipuu.html";
+    }, 400)
 })
-/* function display1(changedColor){
-    if(document.getElementById('vaihtoehto1-1').checked) {
-      document.getElementById('vaihtoehto1-1').style.backgroundColor=changedColor
-    } 
-    else if(document.getElementById('vaihtoehto1-2').checked) {
-      document.getElementById('vaihtoehto1-2').style.backgroundColor=changedColor
-    }
-    else if(document.getElementById('vaihtoehto1-3').checked) {
-      document.getElementById('vaihtoehto1-3').style.backgroundColor=changedColor
-    }
-    else if(document.getElementById('vaihtoehto1-4').checked) {
-      document.getElementById('vaihtoehto1-4').style.backgroundColor=changedColor
-    }
-    else{
-      document.getElementById('vaihtoehto1-5').style.backgroundColor=changedColor
-    }  
-  } */
