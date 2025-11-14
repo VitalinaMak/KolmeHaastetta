@@ -67,6 +67,7 @@ function tarkista(kirjain) {
         gameIsOn = false;
         let tulos = pointsCount();
         pisteet += tulos;
+        localStorage.setItem("kokonaisPisteet", pisteet);
         setTimeout(() => {
             alert("Haaste on loppu! Sait " + tulos + " pistettä.");
             window.location.href = 'palapeli.html';;
@@ -87,6 +88,7 @@ function tarkista(kirjain) {
         if (!(oikea.includes("?"))) {
             alert("Kaikki on oikein! Saat 100 pistettä.");
             pisteet += 100;
+            localStorage.setItem("kokonaisPisteet", pisteet);
             setTimeout(() => {
                 window.location.href = 'palapeli.html';
             }, 400)

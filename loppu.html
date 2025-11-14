@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loppu</title>
+    <link rel="stylesheet" href="Styles.css" />
+    <style>
+      h2,
+      h3 {
+        margin-bottom: 10px;
+        padding: 10px 5px 10px 5px;
+        text-align: center;
+        max-width: 400px;
+      }
+
+      #gameStart {
+        background-color: #2596be;
+        color: #ffe6bf;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        cursor: pointer;
+        border: #2596be solid 1px;
+        border-radius: 4px;
+      }
+
+      #gameStart:hover {
+        background-color: #1e7b9c;
+      }
+
+      h3 {
+        color: #294d62;
+        font-weight: bolder;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+      }
+
+      #imageContainer {
+        display: block;
+        background-color: #c1af99;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #bokaali {
+        display: block;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      #results {
+        color: #213e4f;
+      }
+
+      #credits {
+        font-family: Arial, sans-serif;
+        color: #06213c;
+        font-size: 26;
+        width: 200px;
+        height: 30px;
+        padding-top: 10px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main" id="firstpage">
+      <div id="imageContainer">
+        <img id="bokaali" src="BokaaliLopussa2.png" alt="Bokaalin kuva" />
+      </div>
+
+      <h1>Onneksi olkoon!</h1>
+
+      <h3>OLET SUORITTANUT KAIKKI HAASTEET JA SAAT <span id="results"></span> PISTETTÄ</h3>
+      <h3>KIITOS OSALLISTUMISESTA!</h3>
+      <h2 id="gameStart" onclick="startAgain()">ALOITA UUDELLEEN</h2>
+    </div>
+    <p id="credits">Avoimet ovet RPKK 2025</p>
+
+    <script>
+      let pisteet = parseInt(localStorage.getItem("kokonaisPisteet"));
+      document.getElementById("results").innerHTML = pisteet;
+      function startAgain() {
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>
