@@ -62,7 +62,7 @@ function tarkista(kirjain) {
     if (!(sana.includes(kirjain))) {
         alert("Siellä ei ole tälläistä kirjainta!");
         virheet += 1;
-        document.getElementById("peruskuva").src = `hirsipuu${virheet}.png`;
+        document.getElementById("peruskuva").src = `Hirsipuu${virheet}.png`;
     if (virheet == 5) {
         gameIsOn = false;
         let tulos = pointsCount();
