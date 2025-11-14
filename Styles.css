@@ -2,19 +2,17 @@ body {
   background-color: #294d62;
 }
 
-#container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  margin: auto;
-  padding: 30px 10px 20px 10px;
-  max-width: 1100px;
-}
-
 .main {
+  max-width: 1100px;
+  margin: auto;
   background-color: #c1af99;
   flex-grow: 10;
+  border: #ffe6bf 10px solid;
+}
+
+#firstpage {
+  position: relative;
+  margin-top: 50px;
 }
 
 .side {
@@ -38,17 +36,64 @@ h1 {
 }
 
 .haasteenNumero {
+  background-color: #ffe6bf;
   text-align: start;
-  padding-left: 5px;
+  padding: 0px 10px 10px 15px;
   font-size: 35px;
-  margin: 10px;
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 .kysymyksenNumero {
+  display: block;
   padding-left: 15px;
   padding-top: 0px;
   color: #294d62;
   font-weight: bolder;
+}
+
+#mainfieldTietovisa,
+#mainfieldHirsipuu,
+#mainfieldPalapeli {
+  width: 98%;
+  margin: auto;
+  padding: 10px;
+}
+
+#mainfieldTietovisa {
+  max-width: 950px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  max-height: 335px;
+}
+
+#mainfieldHirsipuu {
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+  max-width: 1100px;
+}
+
+#mainfieldPalapeli {
+  max-width: 1100px;
+}
+
+/* tietovisa */
+#formContainer {
+  padding-top: 10px;
+}
+
+.tietovisanKuva {
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  background-color: #ffe6bfa2;
+  border: #9e8c77 solid 3px;
+}
+
+#ensKysymyksenKuva {
+  max-width: 320px;
+  display: block;
+  margin: auto;
 }
 
 form {
@@ -60,6 +105,7 @@ form {
 }
 
 .tietovisaKysymys {
+  display: block;
   font-family: Verdana, Arial;
   font-size: 18px;
   font-weight: bolder;
@@ -68,12 +114,16 @@ form {
 }
 
 .tietovisanVastaus {
-  display: inline-block;
+  display: block;
   text-align: left;
   font-family: Arial, Verdana;
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 7px;
+}
+
+.viimeinenRivi {
+  margin-bottom: 0px;
 }
 
 input[type="radio"] {
@@ -98,23 +148,131 @@ input[type="radio"] {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 12px;
-  margin-top: 7px;
+  margin-top: 14px;
 }
 
 .lahetaVastaus:hover {
   background-color: #3cabd3;
 }
 
-#testi {
+.kysymys2 {
   display: none;
 }
 
-.rightAnswer {
-  background-color: green;
-  color: white;
+.kysymys3 {
+  display: none;
 }
 
-.wrongAnswer {
-  background-color: red;
-  color: white;
+/* hirsipuu */
+.column {
+  display: inline-block;
+  width: 90%;
+  padding: 10px;
+}
+
+table,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  scale: 1.5;
+}
+
+td {
+  height: 20px;
+  width: 20px;
+  text-align: center;
+}
+
+#piilotettuSana {
+  margin: 30px auto 30px 30px;
+  display: inline-block;
+  background-color: rgb(255, 251, 230);
+}
+
+#kuva {
+  position: relative;
+  justify-content: center;
+  width: 440px;
+  margin: 10px;
+}
+
+#kirjat {
+  vertical-align: top;
+}
+
+#peruskuva {
+  position: flex;
+  justify-content: center;
+}
+
+#container {
+  display: block;
+  margin: 0px;
+  padding: 10px;
+}
+
+#secondline {
+  margin-top: 5px;
+}
+
+.letters {
+  display: table-cell;
+  background: #2596be;
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  text-align: center;
+  vertical-align: middle;
+  border-width: 1px;
+  border-color: white;
+  border-style: solid;
+  font-size: 110%;
+  font-style: bold;
+}
+
+.letters:hover {
+  cursor: pointer;
+  background-color: #294d62;
+}
+
+/* palapeli */
+#board {
+  width: 450px;
+  height: 300px;
+  border: #294d62 2px solid;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px;
+  row-gap: 0px;
+  justify-content: center;
+}
+
+#board img {
+  width: 88.56px;
+  height: 98.7px;
+  border: solid #294d62;
+  border-width: 0.5px;
+}
+
+#mainfieldPalapeli h2 {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+#palat {
+  width: 714.7px;
+  height: 198.5px;
+  border: #294d62 2px solid;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffe6bf;
+}
+
+#palat img {
+  width: 88px;
+  height: 98.7px;
+  border: #294d62 0.5px solid;
 }
