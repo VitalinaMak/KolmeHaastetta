@@ -16,7 +16,7 @@ function aloitaHirsipuu() {
     .then(response => response.text())
     .then(text => {
         const lines = text.split('\n');
-        lines.forEach(line => sanalista.push(line.slice(0, -1)));
+        lines.forEach(line => sanalista.push(line.trim()));
         console.log("sanalista ", sanalista);
         let x = Math.floor(Math.random() * 14);
         console.log("x: " + x);
