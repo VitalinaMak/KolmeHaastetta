@@ -69,7 +69,7 @@ function tarkista(kirjain) {
         pisteet += tulos;
         setTimeout(() => {
             alert("Haaste on loppu! Sait " + tulos + " pistettä.");
-            window.location.reload();
+            window.location.href = 'palapeli.html';;
         }, 400)
     }
     return;
@@ -85,9 +85,10 @@ function tarkista(kirjain) {
     }
     setTimeout(() => {
         if (!(oikea.includes("?"))) {
-            alert("Sinä voitit!");
+            alert("Kaikki on oikein! Saat 100 pistettä.");
+            pisteet += 100;
             setTimeout(() => {
-                window.location.href = 'index.html';
+                window.location.href = 'palapeli.html';
             }, 400)
         }
     }, 200)  //näytetään tilanne arvausten mukaan
