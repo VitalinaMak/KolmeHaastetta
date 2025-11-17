@@ -250,10 +250,10 @@ td {
 }
 
 #board img {
-  width: 88.56px;
+  width: 88.666px;
   height: 98.7px;
   border: solid #294d62;
-  border-width: 0.5px;
+  border-width: 0.667px;
 }
 
 #mainfieldPalapeli h2 {
@@ -281,9 +281,9 @@ td {
 }
 
 #palat img {
-  width: 88px;
+  width: 87.916px;
   height: 98.7px;
-  border: #294d62 0.5px solid;
+  border: #294d62 0.667px solid;
 }
 
 #timerDisplay {
