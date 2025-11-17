@@ -250,9 +250,9 @@ td {
 }
 
 #board img {
-  width: 88.666px;
-  height: 98.7px;
-  border: solid #294d62;
+  width: 88px;
+  height: 98px;
+  border: solid 1px #294d62;
   border-width: 0.667px;
 }
 
@@ -271,8 +271,8 @@ td {
 }
 
 #palat {
-  width: 714.7px;
-  height: 198.5px;
+  width: 720px;
+  height: 196px;
   border: #294d62 2px solid;
   margin: 10px auto;
   display: flex;
@@ -281,8 +281,8 @@ td {
 }
 
 #palat img {
-  width: 87.916px;
-  height: 98.7px;
+  width: 88px;
+  height: 98px;
   border: #294d62 0.667px solid;
 }
 
